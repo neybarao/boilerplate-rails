@@ -1,7 +1,96 @@
 @import "bootstrap";
 
 
+@mixin btn_01($color, $hovercolor) {
+	@extend .btn-lg;
+	border: 2px solid $color;
+	color: $color;
+	text-transform: uppercase;
+	font-weight: 600;
+	background: none;
+
+	&:hover {
+		background: $color;
+		color: $hovercolor;
+		text-decoration: none;
+	}
+}
+
+
 html,
 body {
+	background: white;
+	font-family: 'Source Sans Pro', sans-serif;
+}
 
+h1 {
+	display: none;
+}
+h2 {
+	font-weight: 200;
+	font-size: 36px;
+}
+h3 {
+	font-weight: 200;
+	font-size: 24px;
+}
+p {
+	font-size: 16px;
+}
+
+#header {
+	background: white;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	@include box-shadow(rgba(black, 0.2) 0px 1px 4px);
+	z-index: 1000;
+}
+
+#banner {
+	background: #1B3D57;
+	height: 620px;
+	margin-top: 80px;
+
+	.calltoaction {
+		@include btn_01(#ffffff, #1B3D57);
+	}
+}
+
+#noticias {
+	background: #00A1E0;
+	padding-top: 20px;
+	padding-bottom: 60px;
+	color: white;
+
+	p {
+		color: #84DDFF;
+	}
+
+	.calltoaction {
+		@include btn_01(#ffffff, #00A1E0);
+	}
+}
+
+#sobre {
+	padding-top: 20px;
+	padding-bottom: 60px;
+	color: #333;
+	background: #f0f0f0;
+
+	h2 {
+		color: #9B9B9B;
+	}
+}
+
+#footer {
+	padding-top: 20px;
+	padding-bottom: 60px;
+
+	.calltoaction {
+		@include btn_01(#262626, #fff);
+	}
 }

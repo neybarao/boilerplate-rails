@@ -7,8 +7,12 @@
 	<!-- Se você não pretende fazer responsivo remova esta tag -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Hello World</title>
+	<%= favicon_link_tag 'favicon.ico' %>
 
+	<title>B&amp;B Mobilidade Corporativa e Sistemas</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600' rel='stylesheet' type='text/css'>
+	
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application' %>
 	
@@ -16,7 +20,22 @@
 </head>
 <body>
 
-<%= yield %>
+	<div id="header">
+		<div class="container">
+			<div class="col-md-4">
+				<%= image_tag("logo_header.png", :alt => "B&amp;B Mobilidade Corporativa e Sistemas", :height => 80) %>
+			</div>
 
+			<div class="col-md-8">
+				
+			</div>
+		</div>
+	</div>
+	
+	<%= yield %>
+
+	<div id="footer">
+		
+	</div>
 </body>
 </html>
